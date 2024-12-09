@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dd">
+    <meta name="keywords" content="dd, html, css">
+    <meta name="description" content="BIRD-FLOP Jewelry">
+    <title>BIRD-FLOP</title>
+    <link rel="stylesheet" href="product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/bird.png" type="image/icon">
+</head>
+
+<body>
+    <script src="scripts.js"></script>
+    <header>
+        <div class="headerhead">
+            <img class="search" src="images/search.png" alt="Search bar icon" onclick="searchPage()">
+            <div>
+                <button onclick="goToPage()" class="headerbutton">
+                    <img src="images/bird.png" height="25" alt="logo">
+                    <span>BIRD-FLOP</span>
+                </button>
+            </div>
+            <a href="cart.html">
+                <img class="cart" src="images/bag.png" alt="Cart">
+                </a>        </div>
+
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="nav-center">
+                <a href="product.html">Products</a>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="page-heading">ALL PRODUCTS</h1>
+        <aside class="sidebar">
+            <div class="accordion">
+                <h3 onclick="toggleAccordion(this)">TYPE</h3>
+                <ul class="accordion-content">
+                    <li><input type="checkbox" class="filter" data-filter="type" data-value="BAG"> BAGS</li>
+                    <li><input type="checkbox" class="filter" data-filter="type" data-value="KEYCHAINS"> KEYCHAINS</li>
+                    <li><input type="checkbox" class="filter" data-filter="type" data-value="NECKLACES"> NECKLACES</li>
+                    <li><input type="checkbox" class="filter" data-filter="type" data-value="BRACELETS"> BRACELETS</li>
+                </ul>
+            </div>
+        
+            <div class="accordion">
+                <h3 onclick="toggleAccordion(this)">MATERIAL</h3>
+                <ul class="accordion-content">
+                    <li><input type="checkbox" class="filter" name="material" data-filter="material" data-value="SILVER"> SILVER</li>
+                    <li><input type="checkbox" class="filter" name="material" data-filter="material" data-value="GOLD"> GOLD</li>
+                    <li><input type="checkbox" class="filter" name="material" data-filter="material" data-value="OTHER"> OTHER</li>
+                </ul>
+            </div>
+
+            <div class="accordion">
+                <h3 onclick="toggleAccordion(this)">SPECIAL</h3>
+                <ul class="accordion-content">
+                    <li><input type="checkbox" class="filter" data-filter="special" data-value="best"> BESTSELLERS</li>
+                    <li><input type="checkbox" class="filter" data-filter="special" data-value="new"> NEW ITEMS</li>
+                    <li><input type="checkbox" class="filter" data-filter="special" data-value="sale"> SALE</li>
+
+                </ul>
+            </div>
+            <button id="applyFilterButton">Apply Filters</button>
+        </aside>
+
+        <div class="shop-container">
+            <div class="shop-item"  data-type="BRACELETS"  data-material="SILVER">
+                <div class="item-wrap">
+                    <a href="lightning.html" class="shop-item-thumb">
+                        <img 
+                        src="images/1.png" 
+                        alt="Lightning Pearl Bracelet" 
+                        class="product-image">
+                    </a>
+                </div>
+                <div class="item-detail">
+                    <a href="lightning.html">
+                        <h2 class="shop-title">Lightning Pearl Bracelet</h2>
+                        <p class="price">US$ 60.00</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item"  data-type="BRACELETS" data-material="SILVER" data-special="best">
+                <div class="item-wrap">
+                  <a href="music.html" class="shop-item-thumb">
+                    <img 
+                      src="images/2.png" 
+                      alt="Music Watch Bracelet" 
+                      class="product-image">
+                  </a>
+                </div>
+                <div class="item-detail">
+                    <a href="music.html">
+                        <h2 class="shop-title">Music Watch Bracelet</h2>
+                    <p class="price">US$ 66.00</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item"  data-type="KEYCHAINS"  data-material="SILVER" data-special="sale">
+                <div class="item-wrap">
+                    <a href="soft.html" class="shop-item-thumb">
+                        <img 
+                        src="images/5.png" 
+                        alt="Soft and Sweet Charm" 
+                        class="product-image">
+                        <div class="item-overlay">
+                            <div class="item-pay">
+                              <h2>Original Price</h2>
+                              <p class="price">US$ 23.00</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-detail">
+                    <a href="soft.html">
+                        <h2 class="shop-title">Soft and Sweet Charm</h2>
+                        <p class="price">US$ 18.40</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item"  data-type="BAG"  data-material="OTHER" data-special="new">
+                <div class="item-wrap">
+                  <a href="choco.html" class="shop-item-thumb">
+                    <img 
+                    src="https://cdn-optimized.imweb.me/upload/S202102013eeebbbfad138/40e13a1157e88.jpg" 
+                      alt="Chocolate Pocket Bag" 
+                      class="product-image">
+                  </a>
+                </div>
+                <div class="item-detail">
+                    <a href="choco.html">
+                        <h2 class="shop-title">Chocolate Pocket Bag</h2>
+                    <p class="price">US$ 135.00</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item"  data-type="NECKLACES" data-material="SILVER" data-special="best"> 
+                <div class="item-wrap">
+                    <a href="melted.html" class="shop-item-thumb">
+                        <img 
+                        src="images/3.png" 
+                        alt="Melted Pearl Necklace" 
+                        class="product-image">
+                    </a>
+                </div>
+                <div class="item-detail">
+                    <a href="melted.html">
+                        <h2 class="shop-title">Melted Pearl Necklace</h2>
+                        <p class="price">US$ 98.00</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item" data-type="NECKLACES"  data-material="SILVER" >
+                <div class="item-wrap">
+                    <a href="potion.html" class="shop-item-thumb">
+                        <img 
+                        src="images/7.png" 
+                        alt="Love Potion Necklace" 
+                        class="product-image">
+                    </a>
+                </div>
+                <div class="item-detail">
+                    <a href="potion.html">
+                        <h2 class="shop-title">Love Potion Necklace</h2>
+                        <p class="price">US$ 160.00</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shop-item"  data-type="Necklace" data-material="GOLD">
+                <div class="item-wrap">
+                  <a href="cable.html" class="shop-item-thumb">
+                    <img 
+                      src="images/6.webp" 
+                      alt="Playstation Cable Necklace" 
+                      class="product-image">
+                  </a>
+                </div>
+                <div class="item-detail">
+                    <a href="cable.html">
+                        <h2 class="shop-title">Playstation Cable Necklace</h2>
+                    <p class="price">US$ 128.00</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+              
+
+    </main>
+    
+
+    <footer>
+        <div class="foot">
+            <div class="socialmedia">
+                <a href="https://www.tiktok.com/explore" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/?lang=zh" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="footerrights">
+                <p>&copy; 2024 BIRD-FLOP. All rights reserved.</p>
+            </div>
+            <div class="footerlinks">
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>
